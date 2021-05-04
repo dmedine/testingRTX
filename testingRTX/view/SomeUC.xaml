@@ -6,9 +6,26 @@
              xmlns:local="clr-namespace:testingRTX.view"
              xmlns:top="clr-namespace:testingRTX"
              xmlns:viewModel="clr-namespace:testingRTX.viewModel"
+             xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
              mc:Ignorable="d" 
-             d:DataContext="{d:DesignInstance viewModel:MainViewModel}"
+             d:DataContext="{d:DesignData Type=viewModel:MainViewModel, IsDesignTimeCreatable=False}"
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <collections:ArrayList x:Key="colors">
+            <Color>DodgerBlue</Color>
+            <Color>Red</Color>
+            <Color>Green</Color>
+        </collections:ArrayList>
+
+        <collections:ArrayList x:Key="brushes">
+            <SolidColorBrush Color="Transparent"></SolidColorBrush>
+            <SolidColorBrush Color="#861E90FF"></SolidColorBrush>
+            <LinearGradientBrush>
+                <GradientStop Offset="0" Color="#86FF0000" />
+                <GradientStop Offset="1" Color="#80FFFF00" />
+            </LinearGradientBrush>
+        </collections:ArrayList>
+    </UserControl.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
             <top:WpfGraphControl Margin="10" Controller="{Binding GraphController}" />

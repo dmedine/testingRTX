@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RealTimeGraphX.WPF;
 using RealTimeGraphX;
 using RealTimeGraphX.DataPoints;
+using System.Windows.Media;
 
 namespace testingRTX.viewModel
 {
@@ -17,9 +18,21 @@ namespace testingRTX.viewModel
             Controller = new WpfGraphController<TimeSpanDataPoint, DoubleDataPoint>();
             Controller.Range.MinimumY = 0;
             Controller.Range.MaximumY = 1;
-            Controller.Range.MaximumX = TimeSpan.FromSeconds(10);
+            Controller.Range.MaximumX = TimeSpan.FromSeconds(waitTimeMS);
             Controller.Range.AutoY = true;
             Controller.Range.AutoYFallbackMode = GraphRangeAutoYFallBackMode.MinMax;
+            Controller.DataSeriesCollection.Add(new WpfGraphDataSeries()
+            {
+                Name = "Y",
+                Stroke = Colors.Red,
+                StrokeThickness = 5
+            }) ;
+            Controller.DataSeriesCollection.Add(new WpfGraphDataSeries()
+            {
+                Name = "X",
+                Stroke = Colors.Red,
+                StrokeThickness = 5
+            });
         }
         public void Update(IReadOnlyList<double> coords, TimeSpan time)
         {

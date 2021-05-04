@@ -7,10 +7,9 @@
         xmlns:viewModel="clr-namespace:testingRTX.viewModel"
         xmlns:view="clr-namespace:testingRTX.view"
         mc:Ignorable="d"
-        d:DataContext="{d:DesignData Type=viewModel:MasterViewModel, IsDesignTimeCreatable=False}" 
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <!--<view:SomeUC></view:SomeUC>-->
-        <local:WpfGraphControl Margin="10" Controller="{Binding GraphController}" />
+        <view:SomeUC/>
+        <!--<local:WpfGraphControl Margin="10" Controller="{Binding GraphController}" />-->
     </Grid>
 </Window>

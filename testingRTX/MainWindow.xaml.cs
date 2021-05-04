@@ -10,7 +10,6 @@ namespace testingRTX
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
         }
     }
 }
