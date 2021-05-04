@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net4.5</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="RealTimeGraphX">
+      <HintPath>..\..\RealTimeGraphX\RealTimeGraphX.WPF\bin\Debug\RealTimeGraphX.dll</HintPath>
+    </Reference>
+    <Reference Include="RealTimeGraphX.WPF">
+      <HintPath>..\..\RealTimeGraphX\RealTimeGraphX.WPF\bin\Debug\RealTimeGraphX.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>
